@@ -1,38 +1,215 @@
-.App {
-  text-align: center;
+/*== common css==*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+:root {
+  /*  all colors  */
+  --main: #fff;
+  --lightblue: #E3F0F4;
+  --blue: #1FA7EC;
+  --lightblack: #767a76;
+  --black: #000;
+  --light-black: #383d48;
+  --darkblack: #211c16;
+  --lighthbg: #f7f7f7;
+  --light-green: #ebf9eb;
+  --ogradient: linear-gradient(90deg, rgba(231, 106, 17, 1) 0%, rgba(223, 82, 9, 1) 100%);
+  --ggradient: linear-gradient(90deg, rgba(85, 150, 66, 1) 0%, rgba(61, 128, 44, 1) 100%);
+  /* font */
+  --xsmall-font: 14px;
+  --small-font: 1.4rem;
+  --medium-font: 1.8rem;
+  --xmedium-font: 36px;
+  --large-font: 42px;
+  --x-large-font: 64px;
+  /*  box shadow    */
+  --bxs-small: 0px 4px 8px 2px rgba(0, 0, 0, 0.2);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:focus {
+  box-shadow: none;
+  outline: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+
+body {
+  max-width: 400px;
+  margin: 0 auto !important;
+  background-color: var(--white) !important;
+  font-family: 'DM Sans', sans-serif !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.blue-color{
+  color: var(--blue)
+}
+
+.small-font{
+  font-size: var(--small-font)
+}
+
+.news-headline {
+  font-size: 16px;
+  padding: 6px 0;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-line-clamp: 23;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+
+#root {
+  background-color: var(--white);
+  height: 100%
+}
+
+.form-control {
+  border-radius: 40px !important;
+  border: 1px solid var(--blue) !important;
+  padding-left: 40px !important;
+}
+
+
+.btn-search {
+  background: transparent;
+  border: none;
+  position: absolute;
+  left: 6px;
+  top: 0px;
+  font-size: var(--small-font);
+  color: var(--blue);
+}
+
+.custom-search-input {
+  position: relative;
+}
+
+.ringbellnote {
+  font-size: var(--medium-font);
+  color: var(--blue);
+  height: 100%
+}
+
+.custom-search-input {
+  position: relative;
+}
+
+.ringbellnote a {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+  color: var(--blue)
 }
 
-.App-link {
-  color: #61dafb;
+/*  */
+
+.category-name {
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  overflow-x: auto;
+  padding-bottom: 15px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.category-name li {
+  display: inline-flex;
+  padding-right: 20px;
+}
+
+.category-name li:last-child {
+  padding-right: 0;
+}
+
+.category-name li a {
+  text-decoration: none;
+  color: var(--lightblack);
+}
+
+.active {
+  color: var(--blue) !important
+}
+
+.viewall {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+
+
+.font-16{
+  margin-bottom:0;
+  font-size: 18px;
+}
+
+/* card current news */
+
+.card-news-view {
+  padding-left: 0;
+  margin-bottom: 0;
+  display:flex;
+  margin-bottom: 10px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.card-news img {
+  border-radius: 8px;
+}
+
+.card-news-view li {
+  display: inline-flex;
+  padding: 10px;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  flex: 0 0 75%;
+  margin-right: 5%;
+  margin-top:10px;
+  box-shadow: 0px 12px 10px -1px rgb(0 0 0 / 8%);
+}
+
+/* trending news */
+
+
+.trandingnews {
+  padding-left: 0;
+}
+
+.trandingnews li {
+  display: block;
+  box-shadow: 0px 0px 10px 2px rgb(0 0 0 / 8%);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.trandingnews {
+  padding-left: 0;
+}
+
+.newsbucket {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.newsimage {
+  width: 100%;
+  max-width: 30%;
+  flex: 0 0 30%;
+ 
+} 
+
+.newsheadlinesentry{
+  flex:0 0 70%;
+  max-width:70%;
+  padding-left: 10px;
+}
+
+.newsimage img {
+  border-radius: 8px;
+  height: 80px;
 }
