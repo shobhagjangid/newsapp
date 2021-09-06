@@ -4,7 +4,7 @@ import { GoComment } from 'react-icons/go';
 
 
 
-export default function Currentnews(props) {
+const Currentnews = (props) => {
     return (
 
         <li>
@@ -33,3 +33,5 @@ export default function Currentnews(props) {
 
     )
 }
+
+export default Currentnews

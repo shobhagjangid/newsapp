@@ -3,6 +3,7 @@ import Currentnews from '../components/Currentnews.js';
 
 const Currentnewsarticle = () => {
     const [article,setArticle] = useState([]);
+    
     const getData = () => {
         const requestOptions = {
             method: 'GET',
