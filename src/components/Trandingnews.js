@@ -6,7 +6,7 @@ export default function Trandingnews() {
     return (
 
         <li className="newsullist">
-            <article class="newsbucket">
+            <article className="newsbucket">
                 <div className="newsimage">
                 <img src="https://i.insider.com/612daf5b12b9cc0019637316?width=1200&format=jpeg" className="img-fluid" alt="s"/>
                 </div>
