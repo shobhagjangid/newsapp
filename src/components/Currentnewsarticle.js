@@ -4,11 +4,20 @@ import Currentnews from '../components/Currentnews.js';
 const Currentnewsarticle = () => {
     const [article,setArticle] = useState([]);
     const getData = () => {
+        const requestOptions = {
+            method: 'GET',
+            headers: { 
+              'Content-Type':  'application/x-www-form-urlencoded;charset=UTF-8',
+            },
+            // body: formBody
+          }
         let url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=1a7ecab8770946dc844c3b5ab0308159";
-        let data =  fetch(url);
-        let parseData =  data.json();
-        setArticle(parseData);
-        console.log(parseData);
+        fetch(url,requestOptions).then(response => response.json()).then(response => {
+                console.log("DATA IS", response.articles);
+                setArticle(response.articles);
+        }).catch(error => {
+            console.log("Error is",error)
+        })
     }
     useEffect(() => {
         getData();
@@ -22,7 +31,12 @@ const Currentnewsarticle = () => {
             </div>
 
             <ul className="card-news-view">
-                <Currentnews articles={article} cnewscat="" />
+                {article.map((data)=> {
+                    console.log("ALL DATA",data)
+                    return(
+                        <Currentnews articles={data} cnewscat="" />
+                    )
+                })}
 
             </ul> 
             </div>
